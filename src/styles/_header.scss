@@ -1,0 +1,128 @@
+.header{
+    inline-size: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    block-size: 25rem;
+    background: url('../../images/image-hero-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+
+    @include mobile{
+        block-size: 18.75rem;
+        background: url('../../images/image-hero-mobile.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__wrapper{
+        inline-size: 100%;
+        max-inline-size: 69.25rem;
+        margin-block-start: 3.125rem;
+
+        @include mobile{
+            margin-block-start: 2rem;
+        }
+    }
+
+    &__nav{
+        inline-size: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+       @include mobile{
+           padding-inline: 1.5rem;
+       }
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+
+        .links-overlay{
+            @include mobile{
+                display: none;
+                position: absolute;
+                left:0 ;
+                top: 88px;
+                width: 100%;
+                block-size: 100%;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 1000;
+
+                &.show-menu{
+                    display: block;
+                }
+            }
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+
+            @include mobile{
+                position: absolute;
+                left: 1.5rem;
+                inline-size: calc(100% - 3rem);
+                block-size: 212px;
+                background-color: white;
+                border-radius: 5px;
+                display: grid;
+                grid-auto-columns: 1fr;
+                gap: 0;    
+               
+            }
+
+            li{
+                @include mobile{
+                    block-size: 70px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    inline-size: 100%;
+                    padding-inline: 1.5rem;
+                    &:nth-child(2){
+                        border-top: 1px solid #D9D9D9;
+                        border-bottom: 1px solid #D9D9D9;
+                    }                 
+                }
+            }
+
+            a{
+                @include mobile{
+                    display: inline-block;
+                    inline-size: 100%;
+                    block-size: 100%;
+                    padding-block: 1rem;
+
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .hamburger{
+            display: none;
+
+            @include mobile{
+                display: block;
+                block-size: 1.25rem;
+                inline-size: 20px;
+                background: url('../../images/icon-hamburger.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+
+                &-close{
+                    background: url('../../images/icon-close-menu.svg');
+                    background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+                }
+            }
+        }
+    }
+}

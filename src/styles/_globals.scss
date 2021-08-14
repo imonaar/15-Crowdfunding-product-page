@@ -1,0 +1,177 @@
+:root{
+    --Moderate-cyan: hsl(176, 50%, 47%);
+    --Dark-cyan: hsl(176, 72%, 28%);
+
+    //### Neutral
+
+    --Black: hsl(0, 0%, 0%);
+    --Dark-gray: hsl(0, 0%, 48%);
+}
+
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+html{
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+body{
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Commissioner', sans-serif;
+    font-size: 1rem;
+    background-color: #f2f2f2;
+
+    &.menu-active{
+        overflow: hidden;
+    }
+}
+
+ul, li, a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+
+    @include mobile{
+        color: black;
+        font-size: 1rem;
+    }
+}
+
+.main{
+    inline-size: 100%;
+    display: flex;
+    justify-content: center;
+    padding-inline: 1.5rem;
+    position: relative;
+
+    &__wrapper{
+        inline-size: 100%;
+        max-inline-size: 45.625rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & > section:not(:first-child) {
+            background-color: white;
+            border-radius: 5px;
+            padding: 3rem;
+
+            @include mobile{
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+h1, h2, h3, p{
+    margin: 0;
+}
+
+p{
+    color: var(--Dark-gray);
+}
+
+.btn{
+    display: inline-block;
+    block-size: 56px;
+    padding-inline: 40px;
+    border-radius: 200px;
+    border: 0;
+    color: white;
+    background-color: var(--Moderate-cyan);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--Dark-cyan);
+    }
+
+    &:active{
+        transform: scale(0.99);
+    }
+
+    &-bookmark{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
+        padding-right: 40px;
+        background-color: #f2f2f2;
+        color: var(--Dark-gray);
+        padding-left: 60px;
+
+        @include mobile{
+            display: none;
+        }
+        
+
+        &:hover{
+            background-color: #f2f2f2;
+        }
+
+        &:active{
+            transform: scale(1);
+        }
+    }
+
+    &-reward{
+       height: 48px;
+    }
+
+    &-finished{
+        background-color: #979797;
+        cursor: not-allowed;
+
+        &:hover{
+            background-color: #979797; 
+        }
+        &:active{
+            transform: scale(1);
+        }   
+    }
+}
+
+.bookmark{
+    position: relative;
+
+    @include mobile{
+        inline-size: 56px;
+    }
+}
+
+.icon-btn{
+    inline-size: 56px;
+    block-size: 56px;
+    border: 0;
+    background: none;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 0.5rem;
+}
+
+.hamburger-btn{
+    border: 0;
+    background: none;
+}
+
+

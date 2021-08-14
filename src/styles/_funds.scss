@@ -1,0 +1,90 @@
+.funds{
+    inline-size: 100%;
+    display: grid;
+    gap: 2rem;
+    padding: 3rem;
+
+    &__count{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+
+       
+
+        .item{
+            display: grid;
+            gap: 0.5rem;
+            border-right: 1px solid #979797;
+            padding-left: 3rem;  
+
+            &:first-child{
+                padding-left: 0;
+            }
+
+            &:last-child{
+                border-right: none;
+            }
+
+            p{
+                font-size: 2rem;
+                font-variant-numeric: tabular-nums;
+                font-weight: bold;
+                color: black;
+            }
+            
+            span{
+                color:  var(--Dark-gray);
+                font-size: .9375rem;
+            }
+        }
+
+        @include mobile{
+            grid-template-columns: none;
+            place-content: center;
+
+            .item{
+                border-right: 0;
+                padding-left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-block: 1.5rem;
+                
+
+                &:nth-child(2){
+                    border-top: 1px solid #979797;
+                    border-bottom: 1px solid #979797;
+                }
+            }
+        }
+    }
+
+    &__progress{
+
+        progress{
+            inline-size: 100%;
+            block-size: .75rem;
+            border: 0;
+            border-radius: 16px;
+            background-color: #f2f2f2;
+            overflow: hidden;
+
+            &::-webkit-progress-bar{
+                border-radius: 16px;
+                overflow: hidden;
+                background-color: #f2f2f2;
+            }
+
+            &::-webkit-progress-value{
+                border-radius: 16px;
+                background-color: var(--Moderate-cyan);
+            }
+
+            &::-moz-progress-bar{
+                border-radius: 16px;
+                background-color: var(--Moderate-cyan);
+            }
+        }
+    }
+}

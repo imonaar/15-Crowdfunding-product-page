@@ -1,0 +1,22 @@
+.dialog{
+    display: none;
+
+    &.opened{
+        display: block;
+    }
+
+    &__window{
+        position: fixed;
+        top: 11.5rem;
+        inline-size: 100%;
+        max-inline-size: 45.625rem;  
+    }
+
+    &__mask{
+        position: fixed;
+        top: 0;
+        left: 0;
+        inline-size: 100%;
+        block-size: 100%;
+    }
+}

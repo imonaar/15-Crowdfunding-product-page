@@ -1,0 +1,44 @@
+.description{
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    margin-block-start: -5rem;
+    padding-inline: 3rem;
+    padding-block-end: 2rem;
+
+    @include mobile{
+        margin-block-start: -3.5rem;
+    }
+
+    &__logo{
+        transform: translateY(-50%);
+
+    }
+
+    &__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-block-end: 2rem;
+
+        h1{
+            font-size: 1.75rem;
+        }
+
+        p{
+            font-size: 1rem;
+            color: var(--Dark-gray);
+        }
+    }
+
+    &__buttons{
+        inline-size: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
