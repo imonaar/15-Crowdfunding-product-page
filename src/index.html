@@ -44,7 +44,7 @@
                     <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
                 </div>
                 <div class="description__buttons">
-                    <button class="btn"> Back this project</button>
+                    <button class="btn js-open-modal"> Back this project</button>
                     <div class="bookmark">
                         <button class="btn btn-bookmark">Bookmark</button>
                         <button class="icon icon-btn"><img src="../images/icon-bookmark.svg" alt="icon-bookmark"> </button>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="card-reward">
                             <p><span>101</span> left </p>
-                            <button class="btn btn-reward">Select Reward</button>
+                            <button class="btn btn-reward js-open-modal">Select Reward</button>
                         </div>
                     </div>
 
@@ -111,7 +111,7 @@
                         </div>
                         <div class="card-reward">
                             <p><span>64</span> left </p>
-                            <button class="btn btn-reward">Select Reward</button>
+                            <button class="btn btn-reward js-open-modal">Select Reward</button>
                         </div>
                     </div>
 
@@ -126,7 +126,7 @@
                         </div>
                         <div class="card-reward">
                             <p><span>0</span> left </p>
-                            <button class="btn btn-reward btn-finished">Select Reward</button>
+                            <button class="btn btn-reward btn-finished js-open-modal">Select Reward</button>
                         </div>
                     </div>
                 </div>
@@ -134,11 +134,145 @@
         </div>
     </main>
 
-    <div class="dialog" role="dialog" aria-labelledby="dialog__title">
-        <div class="dialog__window">
+    <div class="dialog js-dialog" role="dialog" aria-labelledby="dialog__title">
+        <!-- https://stackoverflow.com/questions/25874001/how-to-put-scroll-bar-only-for-modal-body/56229656 -->
+        <div class="dialog__mask">
+            <div class="dialog__window">
+                <div class="modal">
+                    <div class="modal__header">
+                        <div class="heading">
+                            <h1>Back this project</h1>
+                            <button class="close-modal-btn js-close-modal-btn"> <img src="../images/icon-close-modal.svg" alt="icon close modal"> </button>
+                        </div>
+                        <p>  Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+                    </div>
+                    <div class="modal__cards">
+                        <div class="modal__card">
+                            <div class="modal__pledge">
+                                <label for="modal__radio-btn" class="modal__radio">
+                                    <!-- the class is radio because i have conveniently styled a checkbox to appear like a radio btn -->
+                                    <input type="radio" name = "modal__radio-btn" class="modal-radio-btn js-radio-btn">
+                                    <div class="modal__radio-details">
+                                        <div class="modal__radio-header">
+                                            <h2> Pledge with no reward </h2>
+                                        </div>
+                                        <div class="modal__radio-description">
+                                            <p>
+                                                Choose to support us without a reward if you simply believe in our project. As a backer, 
+                                                you will be signed up to receive product updates via email.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="modal__select modal__select-nopledge js-modal-select">
+                                <button class="btn btn-modal">Continue</button>
+                            </div>
+                        </div>
 
+                        <div class="modal__card">
+                            <div class="modal__pledge">
+                                <label for="modal__radio-btn" class="modal__radio">
+                                    <!-- the class is radio because i have conveniently styled a checkbox to appear like a radio btn -->
+                                    <input type="radio" name= "modal__radio-btn" class="modal-radio-btn js-radio-btn">
+                                    <div class="modal__radio-details">
+                                        <div class="modal__radio-header">
+                                            <h2> Bamboo stand <span>Pledge $25 or more </span> </h2>
+                                            <div>
+                                                <span class="modal__radio-count">101</span> left
+                                            </div>
+                                        </div>
+                                        <div class="modal__radio-description">
+                                            <p>
+                                                You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+                                                you’ll be added to a special Backer member list.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="modal__select js-modal-select">
+                                <div class="modal__select-pledge">
+                                    <input type="number" placeholder="Enter your pledge">
+                                </div>
+                                <div class="modal__select-submit">
+                                    <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">25</span>  </button>
+                                    <button class="btn btn-modal">Continue</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="modal__card">
+                            <div class="modal__pledge">
+                                <label for="modal__radio-btn" class="modal__radio">
+                                    <!-- the class is radio because i have conveniently styled a checkbox to appear like a radio btn -->
+                                    <input type="radio" name= "modal__radio-btn" class="modal-radio-btn js-radio-btn">
+                                    <div class="modal__radio-details">
+                                        <div class="modal__radio-header">
+                                            <h2> Black Edition Stand <span>Pledge $75 or more </span> </h2>
+                                            <div>
+                                                <span class="modal__radio-count">64</span> left
+                                            </div>
+                                        </div>
+                                        <div class="modal__radio-description">
+                                            <p>
+                                                You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+                                                member list. Shipping is included.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="modal__select js-modal-select">
+                                <div class="modal__select-pledge">
+                                    <input type="number" placeholder="Enter your pledge">
+                                </div>
+                                <div class="modal__select-submit">
+                                    <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">25</span>  </button>
+                                    <button class="btn btn-modal">Continue</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="modal__card">
+                            <div class="modal__pledge">
+                                <label for="modal__radio-btn" class="modal__radio">
+                                    <!-- the class is radio because i have conveniently styled a checkbox to appear like a radio btn -->
+                                    <input type="radio" name= "modal__radio-btn" class="modal-radio-btn js-radio-btn">
+                                    <div class="modal__radio-details">
+                                        <div class="modal__radio-header">
+                                            <h2>Mahogany Special Edition <span>Pledge $200 or more </span> </h2>
+                                            <div>
+                                                <span class="modal__radio-count">101</span> left
+                                            </div>
+                                        </div>
+                                        <div class="modal__radio-description">
+                                            <p>
+                                                You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+                                                you’ll be added to a special Backer member list.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="modal__select js-modal-select">
+                                <div class="modal__select-pledge">
+                                    <input type="number" placeholder="Enter your pledge">
+                                </div>
+                                <div class="modal__select-submit">
+                                    <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">25</span>  </button>
+                                    <button class="btn btn-modal">Continue</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
-        <div class="dialog__mask"></div>
     </div>
     
     <script src="index.js"></script>

@@ -1,0 +1,127 @@
+.modal{
+    inline-size: 100%;
+    padding: 3rem;
+    display: grid;
+    gap: 2rem;
+
+    &__cards{
+        display: grid;
+        gap: 1rem;
+    }
+
+    &__card{
+        border: 1px solid #E7E7E7;
+        border-radius: 5px;
+
+        &:focus-within{
+            border: 2px solid var(--Moderate-cyan);
+        }
+    }
+
+    &__header{
+        display: grid;
+        gap: 1rem;
+
+        .heading{
+            display: flex;
+            justify-content: space-between;
+
+            button{
+                cursor: pointer;
+            }
+        }
+
+        h1{
+            font-size: 1.5rem;
+        }
+
+        p{
+            line-height: 30px;
+        }
+    }
+
+    &__radio{
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        
+
+        &-details{
+            display: grid;
+            gap: 1rem;
+        }
+
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2{
+                font-size: 1rem;
+                font-weight: 500;
+                display: flex;
+                gap: 1rem;
+
+                span{
+                    color: var(--Moderate-cyan);
+                }
+            }
+
+            div{
+                color: var(--Dark-gray);
+                display: flex;
+                gap: 0.25rem;
+                align-items: center;
+            
+                span{
+                    font-weight: bold;
+                    color: black;
+                    font-size: 1.125rem;
+                }
+            }
+        }
+
+        &-description{
+            font-size: 15px;
+            line-height: 30px;
+        }
+    }
+
+    &__select{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem;
+        max-height: 0;
+        overflow: hidden;
+        border-bottom: 1px solid #E7E7E7;
+        transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+
+        &.show{
+            padding: 1rem;
+            max-height: 100px;
+            overflow: auto;
+            border-top: 1px solid #E7E7E7;
+          
+        }
+
+        &-nopledge{
+            justify-content: flex-end;
+        }
+
+        &-pledge{
+            input{
+                block-size: 48px;
+                font-size: 1rem;
+                padding-inline: 0.5rem;
+                border: none;
+            }
+        }
+
+        &-submit{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}
