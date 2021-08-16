@@ -55,11 +55,11 @@
             <section class="funds">
                 <div class="funds__count">
                     <div class="item">
-                        <p>$89,914</p>
+                        <p class="js-backed">89914</p>
                         <span>of $100,000 backed</span>
                     </div>
                     <div class="item">
-                        <p>5,007</p>
+                        <p class="js-backers">5,007</p>
                         <span>total backers</span>
                     </div>
                     <div class="item">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="funds__progress">
-                    <progress value="89" max="100"></progress>
+                    <progress value="89" max="100" class="progress-bar"></progress>
                 </div>
             </section>
 
@@ -193,11 +193,11 @@
                             </div>
                             <div class="modal__select js-modal-select">
                                 <div class="modal__select-pledge">
-                                    <input type="number" placeholder="Enter your pledge">
+                                    <input type="number" placeholder="Enter your pledge" class="raw-amount" value="25" min="25">
                                 </div>
                                 <div class="modal__select-submit">
                                     <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">25</span>  </button>
-                                    <button class="btn btn-modal">Continue</button>
+                                    <button class="btn btn-modal submit-btn">Continue</button>
                                 </div>
 
                             </div>
@@ -226,11 +226,11 @@
                             </div>
                             <div class="modal__select js-modal-select">
                                 <div class="modal__select-pledge">
-                                    <input type="number" placeholder="Enter your pledge">
+                                    <input type="number" placeholder="Enter your pledge" value="75" min="75">
                                 </div>
                                 <div class="modal__select-submit">
                                     <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">25</span>  </button>
-                                    <button class="btn btn-modal">Continue</button>
+                                    <button class="btn btn-modal submit-btn">Continue</button>
                                 </div>
 
                             </div>
@@ -240,7 +240,7 @@
                             <div class="modal__pledge">
                                 <label for="modal__radio-btn" class="modal__radio">
                                     <!-- the class is radio because i have conveniently styled a checkbox to appear like a radio btn -->
-                                    <input type="radio" name= "modal__radio-btn" class="modal-radio-btn js-radio-btn">
+                                    <input type="radio" name= "modal__radio-btn" class="modal-radio-btn js-radio-btn" >
                                     <div class="modal__radio-details">
                                         <div class="modal__radio-header">
                                             <h2>Mahogany Special Edition <span>Pledge $200 or more </span> </h2>
@@ -259,11 +259,11 @@
                             </div>
                             <div class="modal__select js-modal-select">
                                 <div class="modal__select-pledge">
-                                    <input type="number" placeholder="Enter your pledge">
+                                    <input type="number" placeholder="Enter your pledge" value="200" min="200">
                                 </div>
                                 <div class="modal__select-submit">
                                     <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">25</span>  </button>
-                                    <button class="btn btn-modal">Continue</button>
+                                    <button class="btn btn-modal submit-btn">Continue</button>
                                 </div>
 
                             </div>
