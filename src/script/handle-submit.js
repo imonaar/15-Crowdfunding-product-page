@@ -28,6 +28,13 @@ const updateProgress=(amount)=>{
 
 submitBtns.forEach((btn, indx)=>{
     btn.addEventListener('click',() =>{
+
+        if(indx === 0){
+            smallModal.classList.add('show-modal')
+            jsModalWindow.classList.add('hide')
+            return
+        }
+        
         let submittedPledge
         let rawPledge = parseInt(btn.parentNode.previousElementSibling.children[0].value)
         let fixedPledge = parseInt(btn.previousElementSibling.firstChild.nextSibling.textContent)
