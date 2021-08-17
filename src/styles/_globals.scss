@@ -116,6 +116,8 @@ p{
         color: var(--Dark-gray);
         padding-left: 60px;
 
+        
+
         @include mobile{
             display: none;
         }
@@ -166,6 +168,24 @@ p{
 
 .bookmark{
     position: relative;
+
+    &.bookmarked{
+
+        .btn-bookmark{
+            color: var(--Dark-cyan);
+        }
+        .icon-btn{
+            svg{
+                circle{
+                    fill: var(--Dark-cyan);
+                }
+
+                path{
+                    fill: white;
+                }
+            }
+        }
+    }
 
     @include mobile{
         inline-size: 56px;

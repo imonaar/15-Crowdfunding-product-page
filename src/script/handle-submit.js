@@ -9,6 +9,7 @@ const jsBacked = parseInt(document.querySelector('.js-backed').textContent)
 const jsBackers = parseInt(document.querySelector('.js-backers').textContent)
 const progress = document.querySelector('.progress-bar')
 
+
 //set the progress value when the page loads
 progress.value =Math.floor(jsBacked/1000)
 
@@ -43,4 +44,7 @@ submitBtns.forEach((btn, indx)=>{
 smallModalBtn.addEventListener('click', ()=>{
     dialog.classList.remove('opened')
     document.body.classList.remove('menu-active')
+
+    jsModalWindow.classList.remove('hide')
+    smallModal.classList.remove('show-modal')  
 })

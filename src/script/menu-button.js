@@ -8,3 +8,13 @@ hamburgerMenu.addEventListener('click', ()=>{
     body.classList.toggle('menu-active')
 })
 
+
+const bookmarkBtns = Array.from(document.querySelectorAll('.js-bookmark'))
+const bookmark = document.querySelector('.bookmark')
+
+bookmarkBtns.forEach(btn=>{
+    
+    btn.addEventListener('click', ()=>{
+        bookmark.classList.toggle('bookmarked')
+    })
+})

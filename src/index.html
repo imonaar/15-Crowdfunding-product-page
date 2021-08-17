@@ -22,12 +22,12 @@
                 <div class="header__links">
                     <div class="links-overlay js-overlay">
                         <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Discover</a></li>
-                            <li><a href="#">Get Started</a></li>
+                            <li><a href="#" role="menuitem">About</a></li>
+                            <li><a href="#" role="menuitem">Discover</a></li>
+                            <li><a href="#" role="menuitem">Get Started</a></li>
                         </ul>
                     </div>
-                    <button class="hamburger js-hamburger hamburger-btn"></button>
+                    <button class="hamburger js-hamburger hamburger-btn" aria-haspopup="true"></button>
                 </div>
             </nav>
         </div>
@@ -46,8 +46,8 @@
                 <div class="description__buttons">
                     <button class="btn js-open-modal"> Back this project</button>
                     <div class="bookmark">
-                        <button class="btn btn-bookmark">Bookmark</button>
-                        <button class="icon icon-btn"><img src="../images/icon-bookmark.svg" alt="icon-bookmark"> </button>
+                        <button class="btn btn-bookmark js-bookmark">Bookmark</button>
+                        <button class="icon icon-btn js-bookmark"><svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg> </button>
                     </div>
                 </div>
             </section>
@@ -136,7 +136,7 @@
 
     <div class="dialog js-dialog" role="dialog" aria-labelledby="dialog__title">
         <!-- https://stackoverflow.com/questions/25874001/how-to-put-scroll-bar-only-for-modal-body/56229656 -->
-        <div class="dialog__mask">
+        <div class="dialog__mask js-dialog-mask">
             <div class="dialog__window js-dialog-modal-window">
                 <div class="modal">
                     <div class="modal__header">
@@ -192,7 +192,7 @@
                             </div>
                             <div class="modal__select js-modal-select">
                                 <div class="modal__select-pledge">
-                                    <input type="number" placeholder="Enter your pledge" class="raw-amount" value="25" min="25">
+                                    <input type="number" placeholder="Enter your pledge" class="raw-amount" min="25">
                                 </div>
                                 <div class="modal__select-submit">
                                     <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">25</span>  </button>
@@ -224,10 +224,10 @@
                             </div>
                             <div class="modal__select js-modal-select">
                                 <div class="modal__select-pledge">
-                                    <input type="number" placeholder="Enter your pledge" value="75" min="75">
+                                    <input type="number" placeholder="Enter your pledge" min="75">
                                 </div>
                                 <div class="modal__select-submit">
-                                    <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">25</span>  </button>
+                                    <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">75</span>  </button>
                                     <button class="btn btn-modal submit-btn">Continue</button>
                                 </div>
 
@@ -256,10 +256,10 @@
                             </div>
                             <div class="modal__select js-modal-select">
                                 <div class="modal__select-pledge">
-                                    <input type="number" placeholder="Enter your pledge" value="200" min="200">
+                                    <input type="number" placeholder="Enter your pledge"  min="200">
                                 </div>
                                 <div class="modal__select-submit">
-                                    <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">25</span>  </button>
+                                    <button class="btn-modal btn-modal-amount">$ <span class="fixed-amount">200</span>  </button>
                                     <button class="btn btn-modal submit-btn">Continue</button>
                                 </div>
 
