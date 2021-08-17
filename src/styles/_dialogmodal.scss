@@ -10,7 +10,11 @@
         max-inline-size: 45.625rem;  
         background-color: white;
         block-size: 800px;
-        overflow-y: auto;
+        overflow-y: auto;   
+        
+        &.hide{
+            display: none;
+        }
     }
 
     &__mask{

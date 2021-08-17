@@ -55,11 +55,11 @@
             <section class="funds">
                 <div class="funds__count">
                     <div class="item">
-                        <p class="js-backed">89914</p>
+                        <p class="js-backed">8991</p>
                         <span>of $100,000 backed</span>
                     </div>
                     <div class="item">
-                        <p class="js-backers">5,007</p>
+                        <p class="js-backers">5007</p>
                         <span>total backers</span>
                     </div>
                     <div class="item">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="funds__progress">
-                    <progress value="89" max="100" class="progress-bar"></progress>
+                    <progress value="0" max="100" class="progress-bar"></progress>
                 </div>
             </section>
 
@@ -137,11 +137,11 @@
     <div class="dialog js-dialog" role="dialog" aria-labelledby="dialog__title">
         <!-- https://stackoverflow.com/questions/25874001/how-to-put-scroll-bar-only-for-modal-body/56229656 -->
         <div class="dialog__mask">
-            <div class="dialog__window">
+            <div class="dialog__window js-dialog-modal-window">
                 <div class="modal">
                     <div class="modal__header">
                         <div class="heading">
-                            <h1>Back this project</h1>
+                            <h1 id="dialog__title">Back this project</h1>
                             <button class="close-modal-btn js-close-modal-btn"> <img src="../images/icon-close-modal.svg" alt="icon close modal"> </button>
                         </div>
                         <p>  Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
@@ -150,7 +150,6 @@
                         <div class="modal__card">
                             <div class="modal__pledge">
                                 <label for="modal__radio-btn" class="modal__radio">
-                                    <!-- the class is radio because i have conveniently styled a checkbox to appear like a radio btn -->
                                     <input type="radio" name = "modal__radio-btn" class="modal-radio-btn js-radio-btn">
                                     <div class="modal__radio-details">
                                         <div class="modal__radio-header">
@@ -206,7 +205,6 @@
                         <div class="modal__card">
                             <div class="modal__pledge">
                                 <label for="modal__radio-btn" class="modal__radio">
-                                    <!-- the class is radio because i have conveniently styled a checkbox to appear like a radio btn -->
                                     <input type="radio" name= "modal__radio-btn" class="modal-radio-btn js-radio-btn">
                                     <div class="modal__radio-details">
                                         <div class="modal__radio-header">
@@ -239,7 +237,6 @@
                         <div class="modal__card">
                             <div class="modal__pledge">
                                 <label for="modal__radio-btn" class="modal__radio">
-                                    <!-- the class is radio because i have conveniently styled a checkbox to appear like a radio btn -->
                                     <input type="radio" name= "modal__radio-btn" class="modal-radio-btn js-radio-btn" >
                                     <div class="modal__radio-details">
                                         <div class="modal__radio-header">
@@ -269,8 +266,21 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
+            </div>
+
+            <div class="small-modal js-small-modal">
+                <img src="../images/icon-check.svg" alt="icon-check">
+                <div>
+                    <h2>Thank you for your support</h2>
+                    <p>
+                        Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+                        an email once our campaign is completed.
+                    </p>
+                </div>
+                <button class="btn btn-modal js-small-modal-btn">
+                    Got it!
+                </button>
             </div>
         </div>
     </div>

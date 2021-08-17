@@ -4,6 +4,10 @@
     display: grid;
     gap: 2rem;
 
+    @include mobile{
+        padding: 1.5rem;
+    }
+
     &__cards{
         display: grid;
         gap: 1rem;
@@ -45,7 +49,6 @@
         display: flex;
         gap: 1rem;
         align-items: flex-start;
-        
 
         &-details{
             display: grid;
@@ -57,11 +60,22 @@
             justify-content: space-between;
             align-items: center;
 
+            @include mobile{
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
             h2{
                 font-size: 1rem;
                 font-weight: 500;
                 display: flex;
                 gap: 1rem;
+
+                @include mobile{
+                    flex-direction: column;
+                    align-items: flex-start;
+                }   gap: 0.25rem;
 
                 span{
                     color: var(--Moderate-cyan);
@@ -73,6 +87,7 @@
                 display: flex;
                 gap: 0.25rem;
                 align-items: center;
+
             
                 span{
                     font-weight: bold;
@@ -88,7 +103,7 @@
         }
     }
 
-    &__select{
+    &__select{  
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -98,11 +113,23 @@
         border-bottom: 1px solid #E7E7E7;
         transition: max-height 1s cubic-bezier(0, 1, 0, 1);
 
+        @include mobile{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+           
+            
+        }
+
         &.show{
             padding: 1rem;
             max-height: 100px;
             overflow: auto;
             border-top: 1px solid #E7E7E7;
+
+            @include mobile{
+                max-height: 120px;
+            }
           
         }
 
@@ -111,17 +138,81 @@
         }
 
         &-pledge{
+
+            @include mobile{
+                margin-left: 2.5rem;
+            }
             input{
-                block-size: 48px;
+                block-size: 32px;
                 font-size: 1rem;
                 padding-inline: 0.5rem;
-                border: none;
+                border: none;   
             }
         }
 
         &-submit{
             display: flex;
             gap: 1rem;
+
+            @include mobile{
+                box-sizing: border-box;
+                margin-left: 2.5rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+.small-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+
+    inline-size: 540px;
+    background-color: white;
+
+    visibility: hidden;
+
+    @include mobile{
+        inline-size: 327px;
+    }
+
+    &.show-modal{
+        visibility: visible;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        h2{
+            text-align: center;
+            font-size: 1.5rem;
+
+            @include mobile{
+                font-sie:1.125rem;
+            }
+        }
+        p{
+            text-align: center;
+            line-height: 30px;
+            font-size: 1rem;
+
+            @include mobile{
+                font-size: .875rem;
+                line-height: 24px;
+            }
         }
     }
 }
